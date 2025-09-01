@@ -37,10 +37,6 @@ Users should be able to:
 
 ![Browser Extensions Manager UI](./preview.jpg)
 
-### Links
-
-- Solution URL: [GitHub Repository](https://github.com/bnahmedsoumaya00/Frontend-Mentor-Projects-)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
 
 ## 🛠️ My process
 
@@ -193,8 +189,6 @@ Areas I want to continue focusing on in future projects:
 ## 👨‍💻 Author
 
 - **GitHub** - [bnahmedsoumaya00](https://github.com/bnahmedsoumaya00)
-- **Frontend Mentor** - [@bnahmedsoumaya00](https://www.frontendmentor.io/profile/bnahmedsoumaya00)
-- **LinkedIn** - [Soumaya Ben Ahmed](https://www.linkedin.com/in/soumaya-ben-ahmed/)
 
 ---
 

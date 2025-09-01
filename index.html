@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor Projects - Redirecting...</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            padding: 2rem;
+        }
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #333;
+            border-top: 4px solid #4f46e5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .message {
+            color: #b3b3b3;
+            font-size: 1.1rem;
+        }
+    </style>
+    <script>
+        // Redirect to portfolio after 2 seconds
+        setTimeout(() => {
+            window.location.href = '/newbiePorjects/';
+        }, 2000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚀</div>
+        <h1>Frontend Mentor Projects</h1>
+        <div class="spinner"></div>
+        <p class="message">Redirecting to portfolio...</p>
+        <p><a href="/newbiePorjects/" style="color: #4f46e5; text-decoration: none;">Click here if not redirected automatically</a></p>
+    </div>
+</body>
+</html>

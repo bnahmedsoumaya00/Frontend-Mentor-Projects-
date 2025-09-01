@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor Projects Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span class="logo-text">Frontend Portfolio</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#browser-extensions" class="nav-link" data-section="browser-extensions">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Browser Extensions UI</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#recipe-page" class="nav-link" data-section="recipe-page">
+                    <i class="fas fa-utensils"></i>
+                    <span>Recipe Page</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="theme-switch">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Frontend Mentor Projects</h1>
+                    <p class="hero-subtitle">A collection of responsive web projects showcasing modern frontend development skills</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Responsive Design</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Modern</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-overview">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="browser-extensions">
+                        <div class="project-image">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Browser Extensions Manager UI</h3>
+                            <p>A modern interface for managing browser extensions with dark/light theme toggle</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="recipe-page">
+                        <div class="project-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Recipe Page</h3>
+                            <p>A clean and responsive recipe page with structured content and beautiful typography</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browser Extensions Section -->
+        <section id="browser-extensions" class="content-section">
+            <div class="project-detail">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="project-title-section">
+                        <h1>Browser Extensions Manager UI</h1>
+                        <p class="project-description">A sleek and modern interface for managing browser extensions with seamless theme switching capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Dark/Light theme toggle</li>
+                        <li><i class="fas fa-check"></i> Responsive grid layout</li>
+                        <li><i class="fas fa-check"></i> Interactive extension cards</li>
+                        <li><i class="fas fa-check"></i> Modern typography with Noto Sans</li>
+                        <li><i class="fas fa-check"></i> Smooth animations and transitions</li>
+                    </ul>
+                </div>
+
+                <div class="project-technologies">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">HTML5</span>
+                        <span class="tech-item">CSS3</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">CSS Grid</span>
+                        <span class="tech-item">Flexbox</span>
+                    </div>
+                </div>
+
+                <div class="project-actions">
+                    <button class="btn btn-primary" onclick="openProject('browser-extensions-manager-ui')">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </button>
+                    <button class="btn btn-secondary" onclick="openGitHubRepo('browser-extensions')">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Page Section -->
+        <section id="recipe-page" class="content-section">
+            <div class="project-detail">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-title-section">
+                        <h1>Recipe Page</h1>
+                        <p class="project-description">A beautifully designed recipe page featuring structured content, elegant typography, and a clean layout perfect for cooking enthusiasts.</p>
+                    </div>
+                </div>
+
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Clean and readable typography</li>
+                        <li><i class="fas fa-check"></i> Structured recipe information</li>
+                        <li><i class="fas fa-check"></i> Responsive design for all devices</li>
+                        <li><i class="fas fa-check"></i> Beautiful food imagery</li>
+                        <li><i class="fas fa-check"></i> Easy-to-follow instructions</li>
+                    </ul>
+                </div>
+
+                <div class="project-technologies">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">HTML5</span>
+                        <span class="tech-item">CSS3</span>
+                        <span class="tech-item">Outfit Font</span>
+                        <span class="tech-item">Young Serif</span>
+                        <span class="tech-item">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="project-actions">
+                    <button class="btn btn-primary" onclick="openProject('recipe-page')">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </button>
+                    <button class="btn btn-secondary" onclick="openGitHubRepo('recipe-page')">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

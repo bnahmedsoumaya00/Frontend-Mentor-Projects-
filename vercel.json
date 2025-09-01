@@ -2,15 +2,19 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/index.html"
+      "destination": "/newbiePorjects/index.html"
     },
     {
       "source": "/portfolio",
       "destination": "/newbiePorjects/index.html"
     },
     {
-      "source": "/portfolio/(.*)",
-      "destination": "/newbiePorjects/$1"
+      "source": "/browser-extensions-manager-ui",
+      "destination": "/newbiePorjects/browser-extensions-manager-ui/index.html"
+    },
+    {
+      "source": "/recipe-page",
+      "destination": "/newbiePorjects/recipe-page/index.html"
     }
   ],
   "headers": [

@@ -5,6 +5,9 @@ const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.querySelectorAll('.nav-link');
 const contentSections = document.querySelectorAll('.content-section');
 const projectCards = document.querySelectorAll('.project-card');
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const themeText = document.getElementById('themeText');
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
@@ -18,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     // Set initial active states
     setActiveSection('home');
+    
+    // Initialize theme
+    initializeTheme();
     
     // Add loading animations
     document.body.classList.add('loading');
@@ -33,6 +39,9 @@ function setupEventListeners() {
     
     // Sidebar close button
     sidebarToggle.addEventListener('click', closeMobileMenu);
+    
+    // Theme toggle
+    themeToggle.addEventListener('click', toggleTheme);
     
     // Navigation links
     navLinks.forEach(link => {
@@ -227,11 +236,8 @@ function openProject(projectPath) {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening...';
     
     setTimeout(() => {
-        // For Vercel deployment, use relative paths
-        const isLocalDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        const projectUrl = isLocalDevelopment 
-            ? `../${projectPath}/index.html` 
-            : `/${projectPath}/index.html`;
+        // Since projects are now in the same directory as the portfolio
+        const projectUrl = `./${projectPath}/index.html`;
         
         window.open(projectUrl, '_blank');
         
@@ -255,6 +261,52 @@ function openGitHubRepo(projectName) {
         window.open(githubUrls[projectName], '_blank');
         btn.innerHTML = originalText;
     }, 800);
+}
+
+// Theme Management Functions
+function initializeTheme() {
+    // Check for saved theme preference or default to 'dark'
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    
+    // Add click animation
+    themeToggle.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        themeToggle.style.transform = '';
+    }, 150);
+}
+
+function setTheme(theme) {
+    // Update document attribute
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Save to localStorage
+    localStorage.setItem('theme', theme);
+    
+    // Update theme toggle button
+    updateThemeToggleButton(theme);
+    
+    // Add transition class for smooth theme switching
+    document.body.classList.add('theme-transition');
+    setTimeout(() => {
+        document.body.classList.remove('theme-transition');
+    }, 300);
+}
+
+function updateThemeToggleButton(theme) {
+    if (theme === 'light') {
+        themeIcon.className = 'fas fa-sun';
+        themeText.textContent = 'Light Mode';
+    } else {
+        themeIcon.className = 'fas fa-moon';
+        themeText.textContent = 'Dark Mode';
+    }
 }
 
 // Smooth scrolling for better UX

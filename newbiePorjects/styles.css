@@ -25,12 +25,38 @@
     --gradient-secondary: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
 }
 
+/* Light Theme Color Palette */
+:root[data-theme="light"] {
+    --primary-dark: #ffffff;
+    --secondary-dark: #f8fafc;
+    --tertiary-dark: #f1f5f9;
+    --quaternary-dark: #e2e8f0;
+    --accent-color: #4f46e5;
+    --accent-hover: #6366f1;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-dark: rgba(0, 0, 0, 0.1);
+    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --gradient-secondary: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--primary-dark);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme transition class for smooth switching */
+body.theme-transition * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 /* Sidebar Styles */
@@ -46,6 +72,10 @@ body {
     transform: translateX(0);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px var(--shadow-dark);
 }
 
 .sidebar-header {
@@ -130,10 +160,9 @@ body {
 }
 
 .sidebar-footer {
-    position: absolute;
-    bottom: 2rem;
-    left: 1.5rem;
-    right: 1.5rem;
+    margin-top: auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .theme-switch {
@@ -142,6 +171,19 @@ body {
     gap: 0.75rem;
     color: var(--text-secondary);
     font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.theme-switch:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
 }
 
 .theme-switch i {
@@ -149,6 +191,9 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
 }
 
 /* Mobile Menu Button */
@@ -178,6 +223,7 @@ body {
     margin-left: 280px;
     min-height: 100vh;
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .content-section {
@@ -186,6 +232,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: calc(100vh - 4rem);
 }
 
 .content-section.active {

@@ -36,6 +36,11 @@ Users should be able to:
 
 ![Recipe Page](./preview.jpg)
 
+### Links
+
+- 🌐 **Live Site URL:** [https://recipe-page-by-soumaya.vercel.app/](https://recipe-page-by-soumaya.vercel.app/)
+- 💻 **Solution URL:** [GitHub Repository](https://github.com/bnahmedsoumaya00/Frontend-Mentor-Projects-)
+
 ## 🛠️ My process
 
 ### Built with
@@ -49,6 +54,7 @@ Users should be able to:
 - **Modern CSS** techniques with custom properties
 - **Responsive Images** for optimal loading
 - **Accessibility** features with proper semantic markup
+- **Vercel** for seamless deployment and hosting
 
 ### What I learned
 

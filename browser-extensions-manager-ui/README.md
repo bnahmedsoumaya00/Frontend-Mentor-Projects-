@@ -37,6 +37,10 @@ Users should be able to:
 
 ![Browser Extensions Manager UI](./preview.jpg)
 
+### Links
+
+- 🌐 **Live Site URL:** [https://browser-extensions-by-soumaya.vercel.app/](https://browser-extensions-by-soumaya.vercel.app/)
+- 💻 **Solution URL:** [GitHub Repository](https://github.com/bnahmedsoumaya00/Frontend-Mentor-Projects-)
 
 ## 🛠️ My process
 
@@ -52,6 +56,7 @@ Users should be able to:
 - **Local Storage** for theme persistence
 - **JSON Data** handling for dynamic content
 - **Accessibility** features (keyboard navigation, screen readers)
+- **Vercel** for seamless deployment and hosting
 
 ### What I learned
 

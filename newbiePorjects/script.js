@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupIntersectionObserver();
     setupLoadingAnimations();
 });
-
+//comment test
 // Initialize application
 function initializeApp() {
     // Set initial active states
